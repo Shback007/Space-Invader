@@ -18,7 +18,8 @@ Welcome to Space Invaders, an exhilarating and nostalgic arcade game that takes 
 - Open-source code, making it easy for developers to learn, modify, and contribute to the project.
 
 ## How to Play
-Navigate your spaceship using the arrow keys (or your customized controls), and press the spacebar to shoot lasers at the descending invaders. The objective is simple: eliminate the alien horde while dodging their counterattacks. As the game progresses, the invaders will speed up, making it increasingly challenging to defend Earth.
+Navigate your spaceship using the W A S D keys and press the spacebar to shoot lasers at the descending invaders. The objective is simple: eliminate the alien horde while dodging their counterattacks. As the game progresses, the invaders will speed up, making it increasingly challenging to defend Earth.
+Note:-Make sure caps lock is turned off.
 
 Are you ready to defend our planet from the alien menace and climb to the top of the leaderboard? Join us in the Space Invaders world, and let's take on the invaders together!
 
