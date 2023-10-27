@@ -28,6 +28,9 @@ Contributions to this project are welcome! If you find any bugs or have suggesti
 
 There are some files added with this repo if you want fork it and use those resources to modify the game even more
 
+### Contributors:
+<a href="https://github.com/Shback007" target="_blank"><img src="https://github.com/Shback007.png" width="50px" height="50" style="border-radius: 50%;"></a>   <a href="https://github.com/arindal1" target="_blank"><img src="https://github.com/arindal1.png" width="50px" height="50" style="border-radius: 50%;"></a>
+
 <a href="https://shback007.github.io/Space-Invader/" target="_blank">Game Link</a>
 
 

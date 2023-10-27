@@ -2,27 +2,23 @@
 <html lang="en">
 <head>
     <title>Space-Invaders</title>
-    <style>
-        body{
-            display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background-color: rgb(0, 8, 97);
-        color: white;
-        font-family: Arial, sans-serif;
-        }
-        #scoreEl {
-    font-size: 24px;
-}
-    </style>
+    <link rel = "icon" href = "img/icon.png" type = "image/x-icon">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div style="position: relative;">
         <p style="position: absolute; z-index: 10; color: white; left: 10px; top: 10px; margin: 0; font-family: sans-serif; font-size: 14px;"><span>Score :</span> <span id ="scoreEl">0</span></p>
         <canvas></canvas>
+    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="audio/Background-Music.mp4" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+      
+    <div class="social-icons">
+        <a href="https://instagram.com/" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+        <a href="https://github.com/" target="_blank"><img src="img/github.png" alt="github"></a>
+        <a href="https://www.linkedin.com/in/" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
     </div>
     <script src="script.js"></script>
 </body>

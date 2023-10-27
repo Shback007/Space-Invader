@@ -5,6 +5,16 @@ const c = canvas.getContext('2d')
 canvas.width = 1024
 canvas.height = 576
 
+const bgMusical = new Audio('audio/Teminite&MDK-SpaceInvaders.mp3');
+bgMusical.loop = true;
+bgMusical.volume = 0.05;
+bgMusical.preload = 'auto';
+bgMusical.load();
+bgMusical.addEventListener('canplaythrough', () => {
+    // back ground music is ready to play
+});
+
+
 class Player {
     constructor() {
         
@@ -193,6 +203,7 @@ class Invader {
             }
         })
         )
+        enemyShootingSound.play();
     }   
 }
 
@@ -346,6 +357,11 @@ function animate(){
                 invaderProjectiles.splice(index, 1)
                 player.opacity = 0
                 game.over = true
+                if (game.over == true) {
+                    bgMusical.pause();
+                }
+                gameOver.play();
+                
             }, 0)
 
             setTimeout( () => {
@@ -391,6 +407,7 @@ function animate(){
                         if(invaderFound && ProjectileFound){
                             score +=100
                             scoreEl.innerHTML = score
+                            explosionSound.play();
 
                             createParticles({
                                 object : invader,
@@ -441,10 +458,12 @@ function animate(){
         randomInterval = (Math.floor((Math.random() * 500) +500))
         frames = 0
         console.log(randomInterval)
+        
     }
 
     //spawn projectiles
     frames++
+    bgMusical.play();
 }
 
 animate()
@@ -480,7 +499,7 @@ addEventListener('keydown',({ key }) => {
                 } 
             })
             )
-
+            shootingSound.play();
             // console.log(projectiles)
             break
     }
@@ -507,3 +526,44 @@ addEventListener('keyup',({ key }) => {
             break
     }
 })
+
+bgMusical.play();
+
+
+const shootingSound = new Audio('audio/shoot.wav');
+const enemyShootingSound = new Audio('audio/enemyShoot.wav');
+const explosionSound = new Audio('audio/explode.wav');
+const gameOver = new Audio('audio/gameOver.mp3');
+
+shootingSound.volume = 0.2; // Adjust volume (0.0 to 1.0)
+enemyShootingSound.volume = 0.5;
+explosionSound.volume = 0.4;
+gameOver.volume = 0.5;
+
+
+shootingSound.loop = false; // Set to true if you want the sound to loop
+enemyShootingSound.loop = false;
+explosionSound.loop = false;
+gameOver.loop = false;
+
+
+shootingSound.preload = 'auto';
+shootingSound.load();
+shootingSound.addEventListener('canplaythrough', () => {
+    // Shooting sound is ready to play
+});
+enemyShootingSound.preload = 'auto';
+enemyShootingSound.load();
+enemyShootingSound.addEventListener('canplaythrough', () => {
+    //  enemy Shooting sound is ready to play
+});
+explosionSound.preload = 'auto';
+explosionSound.load();
+explosionSound.addEventListener('canplaythrough', () => {
+    // explosion sound is ready to play
+});
+gameOver.preload = 'auto';
+gameOver.load();
+gameOver.addEventListener('canplaythrough', () => {
+    // death sound is ready to play
+});
