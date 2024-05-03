@@ -12,7 +12,7 @@ Welcome to Space Invaders, an exhilarating and nostalgic arcade game that takes 
 - `index.html`: The main HTML file containing the game's user interface.
 - `script.js`: The JavaScript file containing the game logic and interactivity.
 
-## Key Functionalities
+## Key Functionalities 
 - Authentic gameplay faithful to the original Space Invaders.
 - Modernized graphics and sound effects for an enhanced gaming experience.
 - Open-source code, making it easy for developers to learn, modify, and contribute to the project.
